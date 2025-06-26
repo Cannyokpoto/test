@@ -26,13 +26,10 @@
  }
 
     //I think this is a better approach
-    urls.forEach(async (url) => { 
-    const [data1, data2, data3] = await Promise.all([fetchData(url)]); 
-
-    console.log(data1); 
-    console.log(data2); 
-    console.log(data3); 
-    })
+    for (const url of urls) {
+  const data = await fetchData(url);
+  console.log(data);
+ }
 
 
 
